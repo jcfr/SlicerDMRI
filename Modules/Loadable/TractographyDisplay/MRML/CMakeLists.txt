@@ -7,7 +7,7 @@ set(${KIT}_EXPORT_DIRECTIVE "VTK_SLICER_${MODULE_NAME_UPPER}_MODULE_MRML_EXPORT"
 set(${KIT}_INCLUDE_DIRECTORIES
   )
 
-if(MRML_USE_vtkTeem)
+if(Slicer_MRML_USE_vtkTeem)
   list(APPEND ${KIT}_INCLUDE_DIRECTORIES ${vtkTeem_INCLUDE_DIRS})
 endif()
 
@@ -15,7 +15,7 @@ set(${KIT}_SRCS
   vtkMRMLFiberBundleDisplayNode.cxx
   vtkMRMLFiberBundleDisplayNode.h
   )
-if(MRML_USE_vtkTeem)
+if(Slicer_MRML_USE_vtkTeem)
   list(APPEND ${KIT}_SRCS
     vtkMRMLFiberBundleGlyphDisplayNode.cxx
     vtkMRMLFiberBundleGlyphDisplayNode.h
@@ -38,7 +38,7 @@ set(${KIT}_TARGET_LIBRARIES
   ${VTK_LIBRARIES}
    vtkSlicerAnnotationsModuleMRML
   )
-if(MRML_USE_vtkTeem)
+if(Slicer_MRML_USE_vtkTeem)
   list(APPEND ${KIT}_TARGET_LIBRARIES vtkTeem)
 endif()
 
