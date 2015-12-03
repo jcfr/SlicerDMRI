@@ -36,7 +36,17 @@ endif()
 
 #-----------------------------------------------------------------------------
 # Extension modules
-## NEXT_MODULE
+add_subdirectory("Modules/Loadable/TractographyDisplay")
+add_subdirectory("Modules/Loadable/TractographyInteractiveSeeding")
+
+add_subdirectory("Modules/CLI/DWIToDTIEstimation")
+add_subdirectory("Modules/CLI/DiffusionWeightedVolumeMasking")
+add_subdirectory("Modules/CLI/DiffusionTensorScalarMeasurements")
+add_subdirectory("Modules/CLI/FiberTractMeasurements")
+add_subdirectory("Modules/CLI/TractographyLabelMapSeeding")
+add_subdirectory("Modules/CLI/FiberBundleLabelSelect")
+
+add_subdirectory("Modules/Scripted/DICOM2FullBrainTractography")
 
 #-----------------------------------------------------------------------------
 set(CPACK_INSTALL_CMAKE_PROJECTS "${CPACK_INSTALL_CMAKE_PROJECTS};${CMAKE_BINARY_DIR};${EXTENSION_NAME};ALL;/")
